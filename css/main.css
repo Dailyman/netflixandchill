@@ -55,6 +55,30 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+body {
+    background-color: #454856;
+    color: white;
+    font-family: "futura";
+}
+
+.row {
+    padding: 5%;
+}
+
+img {
+    margin-bottom: 20%;
+}
+
+ul {
+    margin-left: 10%;
+    margin-bottom: 10%;
+}
+
+ul > li {
+    list-style-type: none;
+    
+}
+
 
 
 
