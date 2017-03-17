@@ -4,9 +4,16 @@ $('#get-random-drink-btn').on('click', function() {
 
     $drink_container.empty();
     $('#drink-ajax-loader').show();
+
+    // Default tags 6 = beer, 20 = wine
+    var tag = "6%2C20";
+    if ($("#drink-type-select").val() !== "") {
+        tag = $("#drink-type-select").val();
+    }
+
     $.ajax({
         // url: 'https://karlroos-systemet.p.mashape.com/product?limit=100&order=ASC&order_by=name&start_date_from=2014-03-31&start_date_to=2014-05-01&tag=6%2C20', // The URL to the API. You can get this in the API page of the API you intend to consume
-        url: 'https://karlroos-systemet.p.mashape.com/product?limit=100&order=ASC&order_by=name&tag=6%2C20&start_date_from=2016-01-01', // The URL to the API. You can get this in the API page of the API you intend to consume
+        url: 'https://karlroos-systemet.p.mashape.com/product?limit=200&order=ASC&order_by=name&alcohol_to=0.25&tag='+tag+'&start_date_from=2016-01-01', // The URL to the API. You can get this in the API page of the API you intend to consume
 
         type: 'GET', // The HTTP Method, can be GET POST PUT DELETE etc
         data: {}, // Additional parameters here
@@ -41,7 +48,7 @@ function DisplayProducts(data) {
             tag = tag + ", " + rnd_drink.tags[i].name;
         }
     }
-    var alc = (rnd_drink.alcohol*100).toFixed(2);
+    var alc = (rnd_drink.alcohol*100).toFixed(1);
 
     $drink_container.html(
         // "<p>RND_index: "+rnd_index+"</p>"+
@@ -61,7 +68,7 @@ function DisplayProducts(data) {
         "</tr>"+
         "</tbody>"+
         "</table>"+
-        "<a class='btn btn-primary' target='_blank' href='https://www.systembolaget.se/sok-dryck/?searchquery="+
+        "<a class='btn btn-primary btn-lg btn-block' target='_blank' href='https://www.systembolaget.se/sok-dryck/?searchquery="+
         rnd_drink.product_number+"&fullassortment=1'>"+
         "Sök dryck!"+
         "</a>"
