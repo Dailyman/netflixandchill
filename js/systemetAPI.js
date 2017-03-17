@@ -1,21 +1,30 @@
-var $systemet_container = $('body');
+var $drink_container = $('#drink-container');
 
-$.ajax({
-    // url: 'https://karlroos-systemet.p.mashape.com/product?limit=100&order=ASC&order_by=name&start_date_from=2014-03-31&start_date_to=2014-05-01&tag=6%2C20', // The URL to the API. You can get this in the API page of the API you intend to consume
-    url: 'https://karlroos-systemet.p.mashape.com/product?limit=100&order=ASC&order_by=name&tag=6%2C20&start_date_from=2016-01-01', // The URL to the API. You can get this in the API page of the API you intend to consume
+$('#get-random-drink-btn').on('click', function() {
 
-    type: 'GET', // The HTTP Method, can be GET POST PUT DELETE etc
-    data: {}, // Additional parameters here
-    dataType: 'json',
-    success: function(data) {
-        console.log(data);
-        DisplayProducts(data);
-    },
-    error: function(err) { console.log(err); },
-    beforeSend: function(xhr) {
-        xhr.setRequestHeader("X-Mashape-Authorization", "4QPq3geqCFmshvfP64gCakrWA5Pvp1MX6jJjsn5zTy9sWnG8Xz"); // Enter here your Mashape key
-    }
+    $('#drink-ajax-loader').show();
+    $.ajax({
+        // url: 'https://karlroos-systemet.p.mashape.com/product?limit=100&order=ASC&order_by=name&start_date_from=2014-03-31&start_date_to=2014-05-01&tag=6%2C20', // The URL to the API. You can get this in the API page of the API you intend to consume
+        url: 'https://karlroos-systemet.p.mashape.com/product?limit=100&order=ASC&order_by=name&tag=6%2C20&start_date_from=2016-01-01', // The URL to the API. You can get this in the API page of the API you intend to consume
+
+        type: 'GET', // The HTTP Method, can be GET POST PUT DELETE etc
+        data: {}, // Additional parameters here
+        dataType: 'json',
+        success: function(data) {
+            console.log(data);
+            DisplayProducts(data);
+        },
+        error: function(err) { console.log(err); },
+        beforeSend: function(xhr) {
+            xhr.setRequestHeader("X-Mashape-Authorization", "4QPq3geqCFmshvfP64gCakrWA5Pvp1MX6jJjsn5zTy9sWnG8Xz"); // Enter here your Mashape key
+        },
+        complete: function(){
+            $('#drink-ajax-loader').hide();
+        }
+    });
+
 });
+
 
 
 function DisplayProducts(data) {
@@ -33,15 +42,15 @@ function DisplayProducts(data) {
     }
     var alc = (rnd_drink.alcohol*100).toFixed(2);
 
-    $systemet_container.prepend(
-        "RND_index: "+rnd_index+"<br>"+
-        "Name: "+(rnd_drink.name).trim()+" "+(rnd_drink.name_2).trim()+"<br>"+
-        "Type: "+tag+"<br>"+
-        "Price: "+rnd_drink.price+ " SEK"+"<br>"+
-        "Alcohol: "+alc+ " %"+"<br>"+
-        "<a class='btn btn-primary' target='_blank' href='https://www.systembolaget.se/sok-dryck/?searchquery="+
+    $drink_container.prepend(
+        "<p>RND_index: "+rnd_index+"</p>"+
+        "<p>Name: "+(rnd_drink.name).trim()+" "+(rnd_drink.name_2).trim()+"</p>"+
+        "<p>Type: "+tag+"</p>"+
+        "<p>Price: "+rnd_drink.price+ " SEK"+"</p>"+
+        "<p>Alcohol: "+alc+ " %"+"</p>"+
+        "<p><a class='btn btn-primary' target='_blank' href='https://www.systembolaget.se/sok-dryck/?searchquery="+
         rnd_drink.product_number+"&fullassortment=1'>"+
         "Sök efter denna dryck på systembolaget.se"+
-        "</a>"
+        "</a></p>"
     );
 }
