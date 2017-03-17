@@ -100,7 +100,9 @@ ul > li {
     text-shadow: 2px 2px 5px #DC0405;
 }
 
-
+#drink-ajax-loader {
+    margin: 0 auto;
+}
 
 
 
