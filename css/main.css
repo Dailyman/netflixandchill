@@ -58,7 +58,7 @@ textarea {
 body {
     background-color: #454856;
     color: white;
-    font-family: "futura";
+    font-family: 'Gidugu', sans-serif;
 }
 
 .row {
@@ -78,8 +78,6 @@ ul > li {
     list-style-type: none;
     
 }
-
-
 
 
 
