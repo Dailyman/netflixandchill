@@ -57,12 +57,11 @@ function DisplayProducts(data) {
         "<tr>"+
         "<th class='col-md-2'>Alcohol:</th><td class='col-md-10'>"+alc+ " %"+"</td>"+
         "</tr>"+
-        "<tr>"+
-        "<td class='col-md-12'><a class='btn btn-primary' target='_blank' href='https://www.systembolaget.se/sok-dryck/?searchquery="+
-        rnd_drink.product_number+"&fullassortment=1'>"+
-        "Sök efter denna dryck på systembolaget.se"+
-        "</a></td>"+
-        "</tr>"+
         "</tbody>"
     );
+
+    $("<a class='btn btn-primary' target='_blank' href='https://www.systembolaget.se/sok-dryck/?searchquery="+
+    rnd_drink.product_number+"&fullassortment=1'>"+
+    "Sök dryck!"+
+    "</a>").insertAfter($drink_container);
 }
