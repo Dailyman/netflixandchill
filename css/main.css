@@ -80,15 +80,11 @@ ul > li {
 
 }
 
-.float-left {
-    float: left !important;
+
+#drink-container table td[class*=col-], #drink-container table th[class*=col-] {
+    float: left;
 }
-.float-right {
-    float: right !important;
-}
-.float-none {
-    float: none !important;
-}
+
 
 
 

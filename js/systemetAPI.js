@@ -46,19 +46,19 @@ function DisplayProducts(data) {
         // "<p>RND_index: "+rnd_index+"</p>"+
         "<tbody>"+
         "<tr>"+
-        "<th class='col-md-2 float-left'>Name:</th><td class='col-md-10'>"+(rnd_drink.name).trim()+" "+(rnd_drink.name_2).trim()+"</td>"+
+        "<th class='col-md-2'>Name:</th><td class='col-md-8'>"+(rnd_drink.name).trim()+" "+(rnd_drink.name_2).trim()+"</td>"+
         "</tr>"+
         "<tr>"+
-        "<th class='col-md-2 float-left'>Type:</th><td class='col-md-10'>"+tag+"</td>"+
+        "<th class='col-md-2'>Type:</th><td class='col-md-8'>"+tag+"</td>"+
         "</tr>"+
         "<tr>"+
-        "<th class='col-md-2 float-left'>Price:</th><td class='col-md-10'>"+rnd_drink.price+ " SEK"+"</td>"+
+        "<th class='col-md-2'>Price:</th><td class='col-md-8'>"+rnd_drink.price+ " SEK"+"</td>"+
         "</tr>"+
         "<tr>"+
-        "<th class='col-md-2 float-left'>Alcohol:</th><td class='col-md-10'>"+alc+ " %"+"</td>"+
+        "<th class='col-md-2'>Alcohol:</th><td class='col-md-8'>"+alc+ " %"+"</td>"+
         "</tr>"+
         "<tr>"+
-        "<td class='col-md-12'><a class='btn btn-primary' target='_blank' href='https://www.systembolaget.se/sok-dryck/?searchquery="+
+        "<td class='col-md-10'><a class='btn btn-primary' target='_blank' href='https://www.systembolaget.se/sok-dryck/?searchquery="+
         rnd_drink.product_number+"&fullassortment=1'>"+
         "Sök efter denna dryck på systembolaget.se"+
         "</a></td>"+
