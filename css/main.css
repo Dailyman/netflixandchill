@@ -59,7 +59,6 @@ body {
     background-color: #454856;
     color: white;
     font-family: 'Fjalla One', sans-serif;
-    font-size:px;
 
 }
 
@@ -69,23 +68,28 @@ body {
 
 img {
     margin-bottom: 20%;
-    border-radius: 18px;
 }
 
 ul {
-    
-    
+
+    margin-bottom: 10%;
 }
 
 ul > li {
     list-style-type: none;
-    
+
 }
 
-.logobox{
-    margin-top:-10px;
-   
+.float-left {
+    float: left;
 }
+.float-right {
+    float: right;
+}
+.float-none {
+    float: none;
+}
+
 
 
 
