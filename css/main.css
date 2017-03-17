@@ -59,11 +59,9 @@ body {
     background-color: #454856;
     color: white;
     font-family: 'Fjalla One', sans-serif;
-<<<<<<< Updated upstream
 
-=======
     font-size:20px;
->>>>>>> Stashed changes
+
 }
 
 .row {
@@ -71,12 +69,9 @@ body {
 }
 
 img {
-<<<<<<< Updated upstream
-    margin-bottom: 20%;
-=======
     margin-bottom: 15%;
     border-radius: 18px;
->>>>>>> Stashed changes
+
 }
 
 ul {
@@ -86,12 +81,8 @@ ul {
 
 ul > li {
     list-style-type: none;
-<<<<<<< Updated upstream
 
-=======
     text-shadow: 0.5px 0.5px 0.7px #DC0405;
-    
->>>>>>> Stashed changes
 }
 
 
