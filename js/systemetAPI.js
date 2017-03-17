@@ -13,7 +13,7 @@ $('#get-random-drink-btn').on('click', function() {
 
     $.ajax({
         // url: 'https://karlroos-systemet.p.mashape.com/product?limit=100&order=ASC&order_by=name&start_date_from=2014-03-31&start_date_to=2014-05-01&tag=6%2C20', // The URL to the API. You can get this in the API page of the API you intend to consume
-        url: 'https://karlroos-systemet.p.mashape.com/product?limit=200&order=ASC&order_by=name&alcohol_to=0.25&tag='+tag+'&start_date_from=2016-01-01', // The URL to the API. You can get this in the API page of the API you intend to consume
+        url: 'https://karlroos-systemet.p.mashape.com/product?limit=200&order=ASC&order_by=name&alcohol_to=0.25&price_to=500&tag='+tag+'&start_date_from=2016-01-01', // The URL to the API. You can get this in the API page of the API you intend to consume
 
         type: 'GET', // The HTTP Method, can be GET POST PUT DELETE etc
         data: {}, // Additional parameters here
