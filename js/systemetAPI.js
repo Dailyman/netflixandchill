@@ -2,6 +2,7 @@ var $drink_container = $('#drink-container');
 
 $('#get-random-drink-btn').on('click', function() {
 
+    $drink_container.empty();
     $('#drink-ajax-loader').show();
     $.ajax({
         // url: 'https://karlroos-systemet.p.mashape.com/product?limit=100&order=ASC&order_by=name&start_date_from=2014-03-31&start_date_to=2014-05-01&tag=6%2C20', // The URL to the API. You can get this in the API page of the API you intend to consume
@@ -42,26 +43,28 @@ function DisplayProducts(data) {
     }
     var alc = (rnd_drink.alcohol*100).toFixed(2);
 
-    $drink_container.prepend(
+    $drink_container.html(
         // "<p>RND_index: "+rnd_index+"</p>"+
+        "<table class='table table-responsive'>"+
         "<tbody>"+
         "<tr>"+
-        "<th class='col-md-2'>Name:</th><td class='col-md-10'>"+(rnd_drink.name).trim()+" "+(rnd_drink.name_2).trim()+"</td>"+
+        "<th>Name:</th><td>"+(rnd_drink.name).trim()+" "+(rnd_drink.name_2).trim()+"</td>"+
         "</tr>"+
         "<tr>"+
-        "<th class='col-md-2'>Type:</th><td class='col-md-10'>"+tag+"</td>"+
+        "<th>Type:</th><td>"+tag+"</td>"+
         "</tr>"+
         "<tr>"+
-        "<th class='col-md-2'>Price:</th><td class='col-md-10'>"+rnd_drink.price+ " SEK"+"</td>"+
+        "<th>Price:</th><td>"+rnd_drink.price+ " SEK"+"</td>"+
         "</tr>"+
         "<tr>"+
-        "<th class='col-md-2'>Alcohol:</th><td class='col-md-10'>"+alc+ " %"+"</td>"+
+        "<th>Alcohol:</th><td>"+alc+ " %"+"</td>"+
         "</tr>"+
-        "</tbody>"
+        "</tbody>"+
+        "</table>"+
+        "<a class='btn btn-primary' target='_blank' href='https://www.systembolaget.se/sok-dryck/?searchquery="+
+        rnd_drink.product_number+"&fullassortment=1'>"+
+        "Sök dryck!"+
+        "</a>"
     );
 
-    $("<a class='btn btn-primary' target='_blank' href='https://www.systembolaget.se/sok-dryck/?searchquery="+
-    rnd_drink.product_number+"&fullassortment=1'>"+
-    "Sök dryck!"+
-    "</a>").insertAfter($drink_container);
 }

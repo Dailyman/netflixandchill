@@ -86,10 +86,6 @@ ul > li {
 }
 
 
-#drink-container table td[class*=col-], #drink-container table th[class*=col-] {
-    float: left;
-}
-
 .maintext{
     text-shadow: 0.5px 0.5px 0.7px #DC0405;
 }
