@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Gidugu" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 
     <!--[if lt IE 9]>
     <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
@@ -22,24 +23,45 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-xs-12">
+            <div class="col-xs-3 logobox"></div>
+            <div class="col-xs-6">
                 <figure><img src="startpic.jpg" alt="Logga Netflix and Chill" class="img-responsive"></figure>
             </div>
+            <div class="col-xs-3 logobox"></div>
+        </div>
+        <div class="row">
             <div class="col-xs-12">
                 <p class="text-center">Random Netflix and Chill generator</p>
             </div>
+        </div>
+        <div class="row">
             <div class="col-xs-12">
+                <p class="text-center">1. Choose your type of alcohol</p>
+            </div>
+        </div>
+        <div class="row">
+        <div class="row">
+            <div class="col-xs-3"></div>
+            <div class="col-xs-6">
                 <select class="form-control" name="drink-type" id="drink-type-select">
                     <option value="">Both beer and wine</option>
                     <option value="6">Beer</option>
                     <option value="20">Wine</option>
                 </select>
+            </div>
+            <div class="col-xs-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4"></div>
+            <div class="clo-xs-4">
                 <button type="button" class="btn btn-danger btn-lg btn-block" id="get-random-drink-btn">Get random drink!</button>
             </div>
+            <div class="col-xs-4"></div>
+        </div>
+        <div class="row">
             <div class="col-xs-12">
                 <img src="img/ajax-loader-gears.svg" alt="Ajax loading image" style="display:none;" id="drink-ajax-loader" class="img-responsive">
-                <div id="drink-container">
-                </div>
+                <div id="drink-container"></div>
             </div>
         </div>
     </div>
