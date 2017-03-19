@@ -100,6 +100,36 @@ ul > li {
     margin: 0 auto;
 }
 
+@media screen and (min-width: 1025px){
+    /*
+    Egenskaper för mobil
+    */
+    
+}
+
+
+@media screen and (min-width: 480px) and (max-width: 1024px){
+    /*
+    Egenskaper för tablets
+    */
+    
+}
+
+@media screen and (min-width: 1025px){
+    
+  /*
+    Egenskaper för desktop
+  */
+    figure {
+        width: 100px;
+        object-position: center;
+        margin-left: 20px;
+        
+    }
+    
+    
+}
+
 
 
 
