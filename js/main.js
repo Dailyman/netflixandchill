@@ -109,4 +109,18 @@ $(function() {
         }, 250);
     });
 
+
+    // START <- SUMMARY
+    $('#restart-button').on('click', function(event) {
+        event.preventDefault();
+
+        $('#summary-box').hide('slide',{direction:'right'},200);
+        $('html, body').css('overflowX', 'hidden');
+        window.setTimeout(function() {
+            $('#start-box').show('slide',{direction:'left'},200,function() {
+                $('html, body').css('overflowX', 'auto');
+            });
+        }, 250);
+    });
+
 });
