@@ -95,6 +95,11 @@ ul > li {
     margin: 0 auto;
 }
 
+#poster{
+    margin-left: auto;
+    margin-right:auto;
+}
+
 @media screen and (min-width: 479px){
     /*
     Egenskaper för mobil

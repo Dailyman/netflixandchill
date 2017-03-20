@@ -1,6 +1,6 @@
 
 
-$( "#btnTest" ).click(function() {
+$( "#get-random-movie-btn" ).click(function() {
    var jsonData;
    var max=2017;
    var min=1970;
@@ -46,7 +46,7 @@ $( "#btnTest" ).click(function() {
          $("#length").html(length);
          $("#plot").html(plot);
          
-         $("#poster").html("<img src="+posterlink+" alt=some_text>");
+         $("#posterbox").html("<img src="+posterlink+" alt=some_text class='img-responsive' id='poster'>");
       }
 
    });
