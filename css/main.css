@@ -59,13 +59,12 @@ body {
     background-color: #454856;
     color: white;
     font-family: 'Josefin Sans', sans-serif;
-
     font-size:20px;
-
+    text-shadow: 0.5px 0.5px 0.7px #DC0405;
 }
 
 .row {
-    padding: 20px;
+    padding: 10px;
 }
 
 img {
@@ -82,11 +81,6 @@ ul {
 ul > li {
     list-style-type: none;
 
-    text-shadow: 0.5px 0.5px 0.7px #DC0405;
-}
-
-
-.maintext{
     text-shadow: 0.5px 0.5px 0.7px #DC0405;
 }
 
@@ -126,7 +120,12 @@ ul > li {
         margin-left: auto;
         margin-right: auto;
  }
- 
+    .get-random-drink-btn {
+        width: 40%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
     
 }
 
