@@ -100,7 +100,7 @@ ul > li {
     margin-right:auto;
 }
 
-#drink-button, #food-button, #movie-button {
+#drink-button, #food-button, #movie-button, #restart-button {
     display: block;
     margin-left: auto;
     margin-right:auto;
