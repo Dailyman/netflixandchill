@@ -1,6 +1,6 @@
 var $drink_container = $('#drink-container');
 
-$('#get-random-drink-btn').on('click', function() {
+$('#randomDrink').on('click', function() {
 
     $drink_container.empty();
     $('#drink-ajax-loader').show();
