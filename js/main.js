@@ -207,10 +207,11 @@ $(function() {
     // START <- SUMMARY
     $('#restart-button').on('click', function(event) {
         event.preventDefault();
-
+        $('#page5').removeClass('active-page');
         $('#summary-box').hide('slide',{direction:'right'},200);
         $('html, body').css('overflowX', 'hidden');
         window.setTimeout(function() {
+            $('#page1').addClass('active-page');
             $('#start-box').show('slide',{direction:'left'},200,function() {
                 $('html, body').css('overflowX', 'auto');
             });

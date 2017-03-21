@@ -1,4 +1,4 @@
-var $drink_container = $('#drink-container');
+var $drink_container = $('.drink-container');
 $drink_container.hide();
 
 $('#randomDrink').on('click', function() {
