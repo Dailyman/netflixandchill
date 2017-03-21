@@ -66,225 +66,206 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-6 text-center"><p>NO,take me back NOW!</p><span class="glyphicon glyphicon-chevron-left icon" aria-hidden="true"></span></div>
-            <div class="col-xs-6 text-center"><p>Naah,i´m done! Next step</p><span class="glyphicon glyphicon-chevron-right icon" aria-hidden="true"></span></div>
-
-            <!--
+            <div class="col-xs-4 text-center"><p>No, take me back NOW!</p><span class="glyphicon glyphicon-chevron-left icon nav-icon" aria-hidden="true" id="drink-prev-button"></span></div>
+            <div class="col-xs-4 text-center"><span class="glyphicon glyphicon-glass icon" aria-hidden="true"></span></div>
+            <div class="col-xs-4 text-center"><p>Nah, I'm done! Next step</p><span class="glyphicon glyphicon-chevron-right icon nav-icon" aria-hidden="true" id="drink-button"></span></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <p class="text-center">1. Choose your type of alcohol</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3"></div>
             <div class="col-xs-6">
-            <button type="button" class="btn btn-success" id="drink-prev-button">Take me back! NOW!</button>
+                <select class="form-control" name="drink-type" id="drink-type-select">
+                    <option value="">Both beer and wine</option>
+                    <option value="6">Beer</option>
+                    <option value="20">Wine</option>
+                </select>
+            </div>
+            <div class="col-xs-3"></div>
         </div>
-        <div class="col-xs-6">
-        <button type="button" class="btn btn-success" id="drink-button">Naah, im done! Take me to the next step!</button>
-    </div>
--->
-</div>
-<div class="row">
-    <div class="col-xs-12 text-center"><span class="glyphicon glyphicon-glass icon" aria-hidden="true"></span>
-    </div>
-</div>
-<div class="row">
-    <div class="col-xs-12">
-        <p class="text-center">1. Choose your type of alcohol</p>
-    </div>
-</div>
-<div class="row">
-    <div class="col-xs-3"></div>
-    <div class="col-xs-6">
-        <select class="form-control" name="drink-type" id="drink-type-select">
-            <option value="">Both beer and wine</option>
-            <option value="6">Beer</option>
-            <option value="20">Wine</option>
-        </select>
-    </div>
-    <div class="col-xs-3"></div>
-</div>
-<div class="row">
-    <div class="col-xs-2 col-md-4"></div>
-    <div class="col-xs-8 col-md-4">
-        <button type="button" class="btn btn-danger btn-lg btn-block get-random-drink-btn" id="randomDrink">Get random drink!</button>
-    </div>
-    <div class="col-xs-2 col-md-4"></div>
-</div>
-<div class="row">
-    <div class="col-xs-12">
-        <img src="img/ring.svg" alt="Ajax loading image" style="display:none;" id="drink-ajax-loader" class="img-responsive">
-    </div>
-</div>
-<div class="row" id="drink-container">
-    <div class="col-xs-12 col-md-2">
-    </div>
-    <div class="col-xs-12 col-md-4" id="drink-icon-container">
-        <i class="icon" id="drink-icon"></i>
-    </div>
-    <div class="col-xs-12 col-md-4">
-        <h3 id="drink-name"></h3>
-        <h5>Type:</h5><p id="drink-type"></p>
-        <h5>Price:</h5><p id="drink-price"></p>
-        <h5>Alcohol:</h5><p id="drink-alcohol"></p>
-        <a class="btn btn-primary btn-lg btn-block" target="_blank" href="" id="drink-search-btn">Sök dryck!</a>
-    </div>
-    <div class="col-xs-12 col-md-2">
-    </div>
-</div>
-</div>
-<div class="container-fluid" id="food-box" style="display:none;">
-    <div class="row">
-        <div class="col-xs-12">
-            <p class="text-center">Random Netflix and Chill generator</p>
+        <div class="row">
+            <div class="col-xs-2 col-md-4"></div>
+            <div class="col-xs-8 col-md-4">
+                <button type="button" class="btn btn-danger btn-lg btn-block get-random-drink-btn" id="randomDrink">Get random drink!</button>
+            </div>
+            <div class="col-xs-2 col-md-4"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <img src="img/ring.svg" alt="Ajax loading image" style="display:none;" id="drink-ajax-loader" class="img-responsive">
+            </div>
+        </div>
+        <div class="row" id="drink-container">
+            <div class="col-xs-12 col-md-2">
+            </div>
+            <div class="col-xs-12 col-md-4" id="drink-icon-container">
+                <i class="icon" id="drink-icon"></i>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <h3 id="drink-name"></h3>
+                <h5>Type:</h5><p id="drink-type"></p>
+                <h5>Price:</h5><p id="drink-price"></p>
+                <h5>Alcohol:</h5><p id="drink-alcohol"></p>
+                <a class="btn btn-primary btn-lg btn-block" target="_blank" href="" id="drink-search-btn">Sök dryck!</a>
+            </div>
+            <div class="col-xs-12 col-md-2">
+            </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-xs-6 text-center"><p>NO,take me back NOW!</p><span class="glyphicon glyphicon-chevron-left icon" aria-hidden="true"></span></div>
-        <div class="col-xs-6 text-center"><p>Naah,i´m done! Next step</p><span class="glyphicon glyphicon-chevron-right icon" aria-hidden="true"></span></div>
-    </div>
-    <div class="row">
-        <div class="col-xs-12 text-center"><span class="glyphicon glyphicon-cutlery icon" aria-hidden="true"></span>
+    <div class="container-fluid" id="food-box" style="display:none;">
+        <div class="row">
+            <div class="col-xs-12">
+                <p class="text-center">Random Netflix and Chill generator</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4 text-center"><p>No, take me back NOW!</p><span class="glyphicon glyphicon-chevron-left icon nav-icon" aria-hidden="true" id="food-prev-button"></span></div>
+            <div class="col-xs-4 text-center"><span class="glyphicon glyphicon-cutlery icon" aria-hidden="true"></span></div>
+            <div class="col-xs-4 text-center"><p>Nah, I'm done! Next step</p><span class="glyphicon glyphicon-chevron-right icon nav-icon" aria-hidden="true" id="food-button"></span></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <p class="text-center">2. Choose your type of food</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3"></div>
+            <div class="col-xs-6">
+                <select class="form-control" name="drink-type" id="food-type-select">
+                    <option value="">Snacks</option>
+                    <option value="6">dish</option>
+                </select>
+            </div>
+            <div class="col-xs-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-2 col-md-4"></div>
+            <div class="col-xs-8 col-md-4">
+                <button type="button" class="btn btn-danger btn-lg btn-block get-random-drink-btn">Get random food!</button>
+            </div>
+            <div class="col-xs-2 col-md-4"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <img src="img/ring.svg" alt="Ajax loading image" style="display:none;" id="food-ajax-loader" class="img-responsive">
+                <div id="food-container"></div>
+            </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-xs-12">
-            <p class="text-center">2. Choose your type of food</p>
+    <div class="container-fluid" id="movie-box" style="display:none;">
+        <div class="row">
+            <div class="col-xs-12">
+                <p class="text-center">Random Netflix and Chill generator</p>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-3"></div>
-        <div class="col-xs-6">
-            <select class="form-control" name="drink-type" id="food-type-select">
-                <option value="">Snacks</option>
-                <option value="6">dish</option>
-            </select>
+        <div class="row">
+            <div class="col-xs-4 text-center"><p>No, take me back NOW!</p><span class="glyphicon glyphicon-chevron-left icon nav-icon" aria-hidden="true" id="movie-prev-button"></span></div>
+            <div class="col-xs-4 text-center"><span class="glyphicon glyphicon-film icon" aria-hidden="true"></span></div>
+            <div class="col-xs-4 text-center"><p>Nah, I'm done! Next step</p><span class="glyphicon glyphicon-chevron-right icon nav-icon" aria-hidden="true" id="movie-button"></span></div>
         </div>
-        <div class="col-xs-3"></div>
-    </div>
-    <div class="row">
-        <div class="col-xs-2 col-md-4"></div>
-        <div class="col-xs-8 col-md-4">
-            <button type="button" class="btn btn-danger btn-lg btn-block get-random-drink-btn">Get random food!</button>
+        <div class="row">
+            <div class="col-xs-12">
+                <p class="text-center">3. Choose your type of Movie</p>
+            </div>
         </div>
-        <div class="col-xs-2 col-md-4"></div>
-    </div>
-    <div class="row">
-        <div class="col-xs-12">
-            <img src="img/ring.svg" alt="Ajax loading image" style="display:none;" id="food-ajax-loader" class="img-responsive">
-            <div id="food-container"></div>
+        <div class="row">
+            <div class="col-xs-3"></div>
+            <div class="col-xs-6">
+                <select class="form-control" name="drink-type" id="movie-type-select">
+                    <option value="">Comedy</option>
+                    <option value="6">Drama</option>
+                    <option value="20">Action</option>
+                    <option value="20">Thriller</option>
+                    <option value="20">Horror</option>
+                    <option value="20">Documentary</option>
+                </select>
+            </div>
+            <div class="col-xs-3"></div>
         </div>
-    </div>
-</div>
-<div class="container-fluid" id="movie-box" style="display:none;">
-    <div class="row">
-        <div class="col-xs-12">
-            <p class="text-center">Random Netflix and Chill generator</p>
+        <div class="row">
+            <div class="col-xs-2 col-md-4"></div>
+            <div class="col-xs-8 col-md-4">
+                <button type="button" class="btn btn-danger btn-lg btn-block" id="get-random-movie-btn">Get random Movie!</button>
+            </div>
+            <div class="col-xs-2 col-md-4"></div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-6 text-center"><p>NO,take me back NOW!</p><span class="glyphicon glyphicon-chevron-left icon" aria-hidden="true"></span></div>
-        <div class="col-xs-6 text-center"><p>Naah,i´m done! Next step</p><span class="glyphicon glyphicon-chevron-right icon" aria-hidden="true"></span></div>
-    </div>
-    <div class="row">
-        <div class="col-xs-12 text-center"><span class="glyphicon glyphicon-film icon" aria-hidden="true"></span>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-12">
-            <p class="text-center">3. Choose your type of Movie</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-3"></div>
-        <div class="col-xs-6">
-            <select class="form-control" name="drink-type" id="movie-type-select">
-                <option value="">Comedy</option>
-                <option value="6">Drama</option>
-                <option value="20">Action</option>
-                <option value="20">Thriller</option>
-                <option value="20">Horror</option>
-                <option value="20">Documentary</option>
-            </select>
-        </div>
-        <div class="col-xs-3"></div>
-    </div>
-    <div class="row">
-        <div class="col-xs-2 col-md-4"></div>
-        <div class="col-xs-8 col-md-4">
-            <button type="button" class="btn btn-danger btn-lg btn-block" id="get-random-movie-btn">Get random Movie!</button>
-        </div>
-        <div class="col-xs-2 col-md-4"></div>
-    </div>
-    <div class="row">
-        <div class="col-xs-12 col-md-2">
-        </div>
-        <div class="col-xs-12 col-md-4" id="posterbox">
+        <div class="row">
+            <div class="col-xs-12 col-md-2">
+            </div>
+            <div class="col-xs-12 col-md-4" id="posterbox">
 
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <h3 id="title"></h3>
+                <h5>År:</h5><p id="year"></p>
+                <h5>Längd:</h5><p id="length"></p>
+                <h5>Handling:</h5><p id="plot"></p>
+                <div id="poster"></div>
+            </div>
+            <div class="col-xs-12 col-md-2">
+            </div>
         </div>
-        <div class="col-xs-12 col-md-4">
-            <h3 id="title"></h3>
-            <h5>År:</h5><p id="year"></p>
-            <h5>Längd:</h5><p id="length"></p>
-            <h5>Handling:</h5><p id="plot"></p>
-            <div id="poster"></div>
-        </div>
-        <div class="col-xs-12 col-md-2">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-12">
-            <img src="img/ring.svg" alt="Ajax loading image" style="display:none;" id="movie-ajax-loader" class="img-responsive">
-            <div id="drink-container"></div>
-        </div>
-    </div>
-</div>
-<div class="container-fluid" id="summary-box" style="display:none;">
-    <div class="row">
-        <div class="col-xs-12">
-            <p class="text-center">Random Netflix and Chill generator</p>
+        <div class="row">
+            <div class="col-xs-12">
+                <img src="img/ring.svg" alt="Ajax loading image" style="display:none;" id="movie-ajax-loader" class="img-responsive">
+            </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-xs-6 text-center"><p>NO,take me back NOW!</p><span class="glyphicon glyphicon-chevron-left icon" aria-hidden="true"></span></div>
-        <div class="col-xs-6 text-center"><p>Naah,i´m done! Next step</p><span class="glyphicon glyphicon-chevron-right icon" aria-hidden="true"></span></div>
-    </div>
-    <div class="row">
-        <div class="col-xs-12">
-            <p class="text-center">You choose: </p>
+    <div class="container-fluid" id="summary-box" style="display:none;">
+        <div class="row">
+            <div class="col-xs-12">
+                <p class="text-center">Random Netflix and Chill generator</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 text-center"><p>No, take me back NOW!</p><span class="glyphicon glyphicon-chevron-left icon nav-icon" aria-hidden="true" id="summary-prev-button"></span></div>
+            <div class="col-xs-6 text-center"><p>I want to redo EVERYTHING!</p><span class="glyphicon glyphicon-chevron-right icon nav-icon" aria-hidden="true" id="restart-button"></span></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <p class="text-center">You choose: </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <span class="glyphicon glyphicon-glass icon" aria-hidden="true"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <p class="text-center">You choose: </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <span class="glyphicon glyphicon-cutlery icon" aria-hidden="true"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <p class="text-center">You choose: </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <span class="glyphicon glyphicon-film icon" aria-hidden="true"></span>
+            </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-xs-12 text-center">
-            <span class="glyphicon glyphicon-glass icon" aria-hidden="true"></span>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-12">
-            <p class="text-center">You choose: </p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-12 text-center">
-            <span class="glyphicon glyphicon-cutlery icon" aria-hidden="true"></span>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-12">
-            <p class="text-center">You choose: </p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-12 text-center">
-            <span class="glyphicon glyphicon-film icon" aria-hidden="true"></span>
-        </div>
-    </div>
-</div>
 
-<!--[if lt IE 8]>
-<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-<![endif]-->
+    <!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
 
-<script src="js/vendor/jquery-1.12.4.min.js"></script>
-<script src="js/vendor/jquery-ui-1.12.1.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="js/main.js"></script>
-<script src="js/systemetAPI.js"></script>
-<script src="js/randommovie.js"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/vendor/jquery-ui-1.12.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+    <script src="js/systemetAPI.js"></script>
+    <script src="js/randommovie.js"></script>
 
 </body>
 </html>

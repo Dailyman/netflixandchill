@@ -53,8 +53,8 @@ textarea {
 
 
 /* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+Author's custom styles
+========================================================================== */
 body {
     background-color: #454856;
     color: white;
@@ -91,6 +91,20 @@ ul > li {
     text-shadow: 2px 2px 5px #DC0405;
 }
 
+.nav-icon {
+    border-radius: 8px;
+    background-color: #DC0405;
+    padding: 2%;
+    cursor: pointer;
+    box-shadow: 2px 2px 1px #333;
+}
+.nav-icon:hover {
+    box-shadow: none;
+}
+
+
+
+
 #drink-icon-container {
     text-align: center;
 }
@@ -109,16 +123,13 @@ ul > li {
 }
 
 #drink-button, #food-button, #movie-button, #restart-button {
-    display: block;
-    margin-left: auto;
-    margin-right:auto;
+
 }
 
-#drink-prev-button, food-prev-button, movie-prev-button, summary-prev-button {
-    display: block;
-    margin-left: auto;
-    margin-right:auto;
+select {
+    font-weight: bold;
 }
+
 
 
 @media screen and (min-width: 479px){
@@ -137,16 +148,16 @@ ul > li {
 
 @media screen and (min-width: 1025px){
 
-  /*
+    /*
     Egenskaper för desktop
-  */
+    */
     figure {
         margin-top: 50px;
         width: 400px;
         display: block;
         margin-left: auto;
         margin-right: auto;
- }
+    }
 
 
 }
@@ -161,23 +172,23 @@ ul > li {
 
 
 /* ==========================================================================
-   Media Queries
-   ========================================================================== */
+Media Queries
+========================================================================== */
 
 @media only screen and (min-width: 35em) {
 
 }
 
 @media print,
-       (-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
+(-o-min-device-pixel-ratio: 5/4),
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 120dpi) {
 
 }
 
 /* ==========================================================================
-   Helper classes
-   ========================================================================== */
+Helper classes
+========================================================================== */
 
 .hidden {
     display: none !important;
@@ -224,8 +235,8 @@ ul > li {
 }
 
 /* ==========================================================================
-   Print styles
-   ========================================================================== */
+Print styles
+========================================================================== */
 
 @media print {
     *,
