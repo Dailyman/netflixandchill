@@ -145,11 +145,11 @@ ul > li {
 
 
 
-#drink-icon-container {
+.drink-icon-container {
     text-align: center;
 }
 
-#drink-icon {
+.drink-icon {
     font-size: 200px;
 }
 

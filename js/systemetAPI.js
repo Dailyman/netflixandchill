@@ -51,23 +51,23 @@ function DisplayProducts(data) {
     }
     var alc = (rnd_drink.alcohol*100).toFixed(1);
 
-    $('#drink-icon').removeClass();
-    if (tag.indexOf("beer") !== -1) {        
-        $('#drink-icon').addClass('icon ion-beer');
+    $('.drink-icon').removeClass();
+    if (tag.indexOf("beer") !== -1) {
+        $('.drink-icon').addClass('icon ion-beer');
     }
     else {
-        $('#drink-icon').addClass('icon ion-wineglass');
+        $('.drink-icon').addClass('icon ion-wineglass');
     }
 
-    $('#drink-name').html((rnd_drink.name).trim()+" "+(rnd_drink.name_2).trim());
+    $('.drink-name').html((rnd_drink.name).trim()+" "+(rnd_drink.name_2).trim());
 
-    $('#drink-type').html(tag);
+    $('.drink-type').html(tag);
 
-    $('#drink-price').html(rnd_drink.price+" SEK");
+    $('.drink-price').html(rnd_drink.price+" SEK");
 
-    $('#drink-alcohol').html(alc+ " %");
+    $('.drink-alcohol').html(alc+ " %");
 
-    $('a#drink-search-btn').attr("href", "https://www.systembolaget.se/sok-dryck/?searchquery="+rnd_drink.product_number+"&fullassortment=1");
+    $('a.drink-search-btn').attr("href", "https://www.systembolaget.se/sok-dryck/?searchquery="+rnd_drink.product_number+"&fullassortment=1");
 
     $drink_container.show();
 

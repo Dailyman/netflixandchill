@@ -1,91 +1,55 @@
 $(function() {
 
-
-
-    $('#page1').on('click', function(event) {
+    function setActiveLink(id) {
         $('#navigation-icons i').each(function(index, el) {
             $(this).removeClass('active-page');
         });
-        // $('#start-box').fadeOut(200);
-        $('#drink-box').fadeOut(200);
-        $('#food-box').fadeOut(200);
-        $('#movie-box').fadeOut(200);
-        $('#summary-box').fadeOut(200);
+        $('#'+id).addClass('active-page');
+    }
+
+    function hidePages(exceptId) {
+        var pages = ["start-box", "drink-box", "food-box", "movie-box", "summary-box"];
+
+        // Hitta och ta bort den sida som inte ska gömmas från listan
+        var index = $.inArray(exceptId, pages);
+        if (index >= 0) {
+            pages.splice(index, 1);
+        }
+
+        for (var i = 0; i < pages.length; i++) {
+            $('#'+pages[i]).fadeOut(200);
+        }
+    }
+
+    function showPage(pageId, linkId) {
+        hidePages(pageId);
         window.setTimeout(function() {
-            $('#page1').addClass('active-page');
-            $('#start-box').fadeIn(200,function() {
+            setActiveLink(linkId);
+            $('#'+pageId).fadeIn(200,function() {
             });
         }, 250);
+    }
+
+    $('#page1').on('click', function(event) {
+        showPage("start-box", "page1");
     });
 
     $('#page2').on('click', function(event) {
-        $('#navigation-icons i').each(function(index, el) {
-            $(this).removeClass('active-page');
-        });
-        $('#start-box').fadeOut(200);
-        // $('#drink-box').fadeOut(200);
-        $('#food-box').fadeOut(200);
-        $('#movie-box').fadeOut(200);
-        $('#summary-box').fadeOut(200);
-        window.setTimeout(function() {
-            $('#page2').addClass('active-page');
-            $('#drink-box').fadeIn(200,function() {
-            });
-        }, 250);
+        showPage("drink-box", "page2");
     });
 
     $('#page3').on('click', function(event) {
-        $('#navigation-icons i').each(function(index, el) {
-            $(this).removeClass('active-page');
-        });
-        $('#start-box').fadeOut(200);
-        $('#drink-box').fadeOut(200);
-        // $('#food-box').fadeOut(200);
-        $('#movie-box').fadeOut(200);
-        $('#summary-box').fadeOut(200);
-        window.setTimeout(function() {
-            $('#page3').addClass('active-page');
-            $('#food-box').fadeIn(200,function() {
-            });
-        }, 250);
+        showPage("food-box", "page3");
     });
 
-
     $('#page4').on('click', function(event) {
-        $('#navigation-icons i').each(function(index, el) {
-            $(this).removeClass('active-page');
-        });
-        $('#start-box').fadeOut(200);
-        $('#drink-box').fadeOut(200);
-        $('#food-box').fadeOut(200);
-        // $('#movie-box').fadeOut(200);
-        $('#summary-box').fadeOut(200);
-        window.setTimeout(function() {
-            $('#page4').addClass('active-page');
-            $('#movie-box').fadeIn(200,function() {
-            });
-        }, 250);
+        showPage("movie-box", "page4");
     });
 
 
     $('#page5').on('click', function(event) {
-        $('#navigation-icons i').each(function(index, el) {
-            $(this).removeClass('active-page');
-        });
-        $('#start-box').fadeOut(200);
-        $('#drink-box').fadeOut(200);
-        $('#food-box').fadeOut(200);
-        $('#movie-box').fadeOut(200);
-        // $('#summary-box').fadeOut(200);
-        window.setTimeout(function() {
-            $('#page5').addClass('active-page');
-            $('#summary-box').fadeIn(200,function() {
-            });
-        }, 250);
+        showPage("summary-box", "page5")
     });
-
-
-
 
 
     // FIRST PAGE IS ALWAYS ACTIVE
