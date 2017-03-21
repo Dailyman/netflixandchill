@@ -1,5 +1,5 @@
-$("#resultBtn").on("click", function(){
-    $("#output").empty();
+$("#getRandomFoodBtn").on("click", function(){
+    $("#food-container").empty();
     var fUrl = 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/random?limitLicense=false&number=1';
 
     $.ajax({
@@ -16,7 +16,7 @@ $("#resultBtn").on("click", function(){
         //for (var i = 0; i < results.length; i++);
         //    var stuff = results[i].;
 
-        $("#output").append("<p>" + title + "<br>" + '<img src="' + image + '"/>' + "<br>" + sourceUrl + "</p>");
+        $("#food-container").append("<p>" + title + "<br>" + '<img src="' + image + '"/>' + "<br>" + sourceUrl + "</p>");
     });
 
 });
