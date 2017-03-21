@@ -173,8 +173,12 @@ ul > li {
     text-align: center;
 }
 
-.drink-icon {
-    font-size: 200px;
+.drink-icon-container > i {
+    font-size: 100px;
+}
+
+.drink-name {
+    margin-bottom: 20px;
 }
 
 #drink-ajax-loader {

@@ -51,12 +51,12 @@ function DisplayProducts(data) {
     }
     var alc = (rnd_drink.alcohol*100).toFixed(1);
 
-    $('.drink-icon').removeClass();
+    $('.drink-icon-container > i').removeClass();
     if (tag.indexOf("beer") !== -1) {
-        $('.drink-icon').addClass('icon ion-beer');
+        $('.drink-icon-container > i').addClass('icon ion-beer');
     }
     else {
-        $('.drink-icon').addClass('icon ion-wineglass');
+        $('.drink-icon-container > i').addClass('icon ion-wineglass');
     }
 
     $('.drink-name').html((rnd_drink.name).trim()+" "+(rnd_drink.name_2).trim());
@@ -71,28 +71,7 @@ function DisplayProducts(data) {
 
     $drink_container.show();
 
-    // $drink_container.html(
-    //     // "<p>RND_index: "+rnd_index+"</p>"+
-    //     "<table class='table table-responsive'>"+
-    //     "<tbody>"+
-    //     "<tr>"+
-    //     "<th>Name:</th><td>"+(rnd_drink.name).trim()+" "+(rnd_drink.name_2).trim()+"</td>"+
-    //     "</tr>"+
-    //     "<tr>"+
-    //     "<th>Type:</th><td>"+tag+"</td>"+
-    //     "</tr>"+
-    //     "<tr>"+
-    //     "<th>Price:</th><td>"+rnd_drink.price+ " SEK"+"</td>"+
-    //     "</tr>"+
-    //     "<tr>"+
-    //     "<th>Alcohol:</th><td>"+alc+ " %"+"</td>"+
-    //     "</tr>"+
-    //     "</tbody>"+
-    //     "</table>"+
-    //     "<a class='btn btn-primary btn-lg btn-block' target='_blank' href='https://www.systembolaget.se/sok-dryck/?searchquery="+
-    //     rnd_drink.product_number+"&fullassortment=1'>"+
-    //     "Sök dryck!"+
-    //     "</a>"
-    // );
+    document.body.scrollTop = document.body.scrollHeight;
+
 
 }
