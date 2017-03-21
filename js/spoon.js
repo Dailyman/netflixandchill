@@ -18,5 +18,5 @@ $("#getRandomFoodBtn").on("click", function(){
 
         $("#food-container").append("<p>" + title + "<br>" + '<img src="' + image + '"/>' + "<br>" + sourceUrl + "</p>");
     });
-
+    
 });
