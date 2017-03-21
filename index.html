@@ -150,49 +150,55 @@
 </div>
 <div class="row">
     <div class="col-xs-12">
-        <p class="text-center">2. Choose your type of food</p>
+        <p class="text-center">1. Choose your type of food</p>
     </div>
 </div>
 <div class="row">
-    <div class="col-xs-3"></div>
-    <div class="col-xs-3">
-        <select class="form-control" name="food-type" id="food-type-select">
-            <option value="breakfast">Breakfast</option>
-            <option value="lunch">Lunch</option>
-            <option value="dinner">Dinner</option>
-            <option value="dessert">Dessert</option>
-        </select>
+    <div class="col-xs-12 col-sm-2 col-md-4 col-lg-5"></div>
+    <div class="col-xs-12 col-sm-8 col-md-4 col-lg-2">
+    <select class="form-control" name="food-type" id="food-type-select">
+        <option value="breakfast">Breakfast</option>
+        <option value="lunch">Lunch</option>
+        <option value="dinner">Dinner</option>
+        <option value="dessert">Dessert</option>
+    </select>
     </div>
-    <div class="col-xs-3">
-        <select class="form-control" name="preference-type" id="preference-type-select">
-            <option value="">Carnivore</option>
-            <option value="vegetarian">Vegetarian</option>
-            <option value="vegan">Vegan</option>
-        </select>
-    </div>
-    <div class="col-xs-3"></div>
+    <div class="col-xs-12 col-sm-2 col-md-4 col-lg-5"></div>
 </div>
 <div class="row">
-    <div class="col-xs-2 col-md-4"></div>
-    <div class="col-xs-8 col-md-4">
-        <button type="button" class="btn btn-danger btn-lg btn-block get-random-drink-btn" id="getRandomFoodBtn">Get random food!</button>
+    <div class="col-xs-12 col-sm-2 col-md-4 col-lg-5"></div>
+    <div class="col-xs-12 col-sm-8 col-md-4 col-lg-2">
+    <select class="form-control" name="preference-type" id="preference-type-select">
+        <option value="">Carnivore</option>
+        <option value="vegetarian">Vegetarian</option>
+        <option value="vegan">Vegan</option>
+    </select>
     </div>
-    <div class="col-xs-2 col-md-4"></div>
+    <div class="col-xs-12 col-sm-2 col-md-4 col-lg-5"></div>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-sm-2 col-md-4 col-lg-5"></div>
+    <div class="col-xs-12 col-sm-8 col-md-4 col-lg-2">
+        <button type="button" class="btn btn-danger btn-lg btn-block get-random-drink-btn" id="randomDrink">Generate</button>
+    </div>
+    <div class="col-xs-12 col-sm-2 col-md-4 col-lg-5"></div>
 </div>
 <div class="row">
     <div class="col-xs-12">
-        <img src="img/ring.svg" alt="Ajax loading image" style="display:none;" id="food-ajax-loader" class="img-responsive">
-        <div class="row" id="food-container">
-            <div class="col-xs-12 col-md-2">
-            </div>
-            <div class="col-xs-12 col-md-4">
-                <h3 id="food-title"></h3>
-                <h5>Type:</h5><p id="food-type"></p>
-                <a class="btn btn-primary btn-lg btn-block" target="_blank" href="" id="food-search-btn">Gå till recept</a>
-            </div>
-            <div class="col-xs-12 col-md-2">
-            </div>
-        </div>
+        <img src="img/ring.svg" alt="Ajax loading image" style="display:none;" id="drink-ajax-loader" class="img-responsive">
+    </div>
+</div>
+<div class="row" id="drink-container">
+    <div class="hidden-xs hidden-sm col-md-2">
+    </div>
+    <div class="col-xs-12 col-sm-4 col-md-4 drink-icon-container">
+        <i class="icon"></i>
+    </div>
+    <div class="col-xs-12 col-sm-8 col-md-4">
+        <h3 class="food-title"></h3>
+        <a class="btn btn-primary btn-lg btn-block drink-search-btn" target="_blank" href="">Sök dryck!</a>
+    </div>
+    <div class="hidden-xs hidden-sm col-md-2">
     </div>
 </div>
 </div>
