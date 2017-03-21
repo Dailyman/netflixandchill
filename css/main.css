@@ -85,6 +85,29 @@ ul > li {
     text-shadow: 0.5px 0.5px 0.7px #DC0405;
 }
 
+#navigation-icons {
+    text-align: center;
+    font-size: 30px;
+}
+
+#navigation-icons > i {
+    margin: 0 10px;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#navigation-icons > i:hover {
+    background-color: #DC0405;
+    box-shadow: none;
+}
+
+.active-page {
+    background-color: #DC0405;
+    box-shadow: 2px 2px 1px #333;
+}
+
+
 .icon{
     font-size:50px;
     margin-top:2%;
