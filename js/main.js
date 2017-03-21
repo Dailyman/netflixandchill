@@ -88,7 +88,7 @@ $(function() {
 
 
 
-
+    // FIRST PAGE IS ALWAYS ACTIVE
     $('#page1').addClass('active-page');
 
     // --> NEXT -->

@@ -67,13 +67,17 @@ body {
     text-shadow: 0.5px 0.5px 0.7px #DC0405;
 }
 
+#header {
+    background-color: #DC0405;
+}
+
 .row {
     padding: 10px;
 }
 
 img {
-    margin-top: 20px;
-    margin-bottom: 5%;
+    /*margin-top: 20px;*/
+    /*margin-bottom: 5%;*/
     border-radius: 18px;
 
 }
@@ -89,9 +93,18 @@ ul > li {
     text-shadow: 0.5px 0.5px 0.7px #DC0405;
 }
 
+.vbottom {
+    display: inline-block;
+    vertical-align: bottom;
+    float: none;
+}
+
 #navigation-icons {
     text-align: center;
     font-size: 30px;
+    background-color: rgba(200,200,200,0.4);
+    border-radius: 8px;
+    padding: 10px 3px;
 }
 
 #navigation-icons > i {
@@ -108,7 +121,7 @@ ul > li {
 
 .active-page {
     background-color: #DC0405;
-    box-shadow: 2px 2px 1px #333;
+    box-shadow: 2px 2px 1px rgba(0,0,0,0.5);
 }
 
 
@@ -123,7 +136,7 @@ ul > li {
     background-color: #DC0405;
     padding: 2%;
     cursor: pointer;
-    box-shadow: 2px 2px 1px #333;
+    box-shadow: 2px 2px 1px rgba(0,0,0,0.5);
 }
 .nav-icon:hover {
     box-shadow: none;
