@@ -22,15 +22,15 @@ $(document).on("ready", function(){
             var sourceUrl = results.sourceUrl;
         //for (var i = 0; i < results.length; i++);
         //    var stuff = results[i].;
-            /*image = '<img src="' + image + '" class="img-thumbnail">';
+            image = '<img src="' + image + '" class="img-thumbnail">';
             title = '<p>Titel: <span class="title">' + "<br>" + title + '</span></p>';
-            sourceUrl = '<a class="btn btn-primary btn-lg btn-block" target="_blank" href="' + sourceUrl + '" id="food-search-btn">Gå till recept</a>';*/
+            sourceUrl = '<a class="btn btn-primary btn-lg btn-block" target="_blank" href="' + sourceUrl + '" id="food-search-btn">Gå till recept</a>';
 
-            //var addStuff = $('<div class="col-xs-12 col-md-6" centered>' + '<figure>' + image + '</figure>' + title + sourceUrl + '</div>');
+            var addStuff = $('<div class="col-xs-12 col-md-6" centered>' + '<figure>' + image + '</figure>' + title + sourceUrl + '</div>');
 
-            $("#food-title").html(title);
-            $("#recipe-image").html('<img src="' + image + '" alt=some_text class="img-responsive" id="poster">');
-            //$("#food-container").append(addStuff);
+            /*$("#food-title").html(title);
+            $("#recipe-image").html('<img src="' + image + '" alt=some_text class="img-responsive" id="poster">');*/
+            $("#food-container").append(addStuff);
             //$("#food-container").html("<p>Title: " + title + "</p>");
             //$("a#food-search-btn").attr("href", "sourceUrl");
         });
