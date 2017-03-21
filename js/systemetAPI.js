@@ -1,8 +1,9 @@
 var $drink_container = $('#drink-container');
+$drink_container.hide();
 
 $('#randomDrink').on('click', function() {
 
-    $drink_container.empty();
+    $drink_container.hide();
     $('#drink-ajax-loader').show();
 
     // Default tags 6 = beer, 20 = wine
@@ -50,28 +51,48 @@ function DisplayProducts(data) {
     }
     var alc = (rnd_drink.alcohol*100).toFixed(1);
 
-    $drink_container.html(
-        // "<p>RND_index: "+rnd_index+"</p>"+
-        "<table class='table table-responsive'>"+
-        "<tbody>"+
-        "<tr>"+
-        "<th>Name:</th><td>"+(rnd_drink.name).trim()+" "+(rnd_drink.name_2).trim()+"</td>"+
-        "</tr>"+
-        "<tr>"+
-        "<th>Type:</th><td>"+tag+"</td>"+
-        "</tr>"+
-        "<tr>"+
-        "<th>Price:</th><td>"+rnd_drink.price+ " SEK"+"</td>"+
-        "</tr>"+
-        "<tr>"+
-        "<th>Alcohol:</th><td>"+alc+ " %"+"</td>"+
-        "</tr>"+
-        "</tbody>"+
-        "</table>"+
-        "<a class='btn btn-primary btn-lg btn-block' target='_blank' href='https://www.systembolaget.se/sok-dryck/?searchquery="+
-        rnd_drink.product_number+"&fullassortment=1'>"+
-        "Sök dryck!"+
-        "</a>"
-    );
+    $('#drink-icon').removeClass();
+    if (tag.indexOf("beer") !== -1) {        
+        $('#drink-icon').addClass('icon ion-beer');
+    }
+    else {
+        $('#drink-icon').addClass('icon ion-wineglass');
+    }
+
+    $('#drink-name').html((rnd_drink.name).trim()+" "+(rnd_drink.name_2).trim());
+
+    $('#drink-type').html(tag);
+
+    $('#drink-price').html(rnd_drink.price+" SEK");
+
+    $('#drink-alcohol').html(alc+ " %");
+
+    $('a#drink-search-btn').attr("href", "https://www.systembolaget.se/sok-dryck/?searchquery="+rnd_drink.product_number+"&fullassortment=1");
+
+    $drink_container.show();
+
+    // $drink_container.html(
+    //     // "<p>RND_index: "+rnd_index+"</p>"+
+    //     "<table class='table table-responsive'>"+
+    //     "<tbody>"+
+    //     "<tr>"+
+    //     "<th>Name:</th><td>"+(rnd_drink.name).trim()+" "+(rnd_drink.name_2).trim()+"</td>"+
+    //     "</tr>"+
+    //     "<tr>"+
+    //     "<th>Type:</th><td>"+tag+"</td>"+
+    //     "</tr>"+
+    //     "<tr>"+
+    //     "<th>Price:</th><td>"+rnd_drink.price+ " SEK"+"</td>"+
+    //     "</tr>"+
+    //     "<tr>"+
+    //     "<th>Alcohol:</th><td>"+alc+ " %"+"</td>"+
+    //     "</tr>"+
+    //     "</tbody>"+
+    //     "</table>"+
+    //     "<a class='btn btn-primary btn-lg btn-block' target='_blank' href='https://www.systembolaget.se/sok-dryck/?searchquery="+
+    //     rnd_drink.product_number+"&fullassortment=1'>"+
+    //     "Sök dryck!"+
+    //     "</a>"
+    // );
 
 }
