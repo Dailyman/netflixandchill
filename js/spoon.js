@@ -20,7 +20,8 @@ $("#getRandomFoodBtn").on("click", function(){
         //for (var i = 0; i < results.length; i++);
         //    var stuff = results[i].;
 
-        $("#food-container").append("<p>" + title + "<br>" + '<img src="' + image + '"/>' + "<br>" + sourceUrl + "</p>");
+        $("#food-container").append("<figure>" + '<img class="img-responsive" src="' + image + '">' + "</figure>");
+        $("#food-title").html(title);
     });
 
 });
