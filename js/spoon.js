@@ -1,6 +1,10 @@
 $("#getRandomFoodBtn").on("click", function(){
     $("#food-container").empty();
-    var fUrl = 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/random?limitLicense=false&number=1';
+
+    var type = $("#food-type-select").val();
+    var pref = $("#preference-type-select").val();
+
+    var fUrl = 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/random?limitLicense=false&number=1&tags=' + type + '%2C' + pref ;
 
     $.ajax({
         url: fUrl,
@@ -18,5 +22,5 @@ $("#getRandomFoodBtn").on("click", function(){
 
         $("#food-container").append("<p>" + title + "<br>" + '<img src="' + image + '"/>' + "<br>" + sourceUrl + "</p>");
     });
-    
+
 });
