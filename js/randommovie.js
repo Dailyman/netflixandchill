@@ -1,6 +1,6 @@
 
 
-var $movie= $('#movie-box');
+var $movie= $('#movieInfo');
 $movie.hide();
 
 $( "#get-random-movie-btn" ).click(function() {
@@ -10,8 +10,6 @@ $( "#get-random-movie-btn" ).click(function() {
    var urlXX;
    randomSYear=Math.floor(Math.random() * (max - min + 1)) + min;
    randomEYear=randomSYear+2;
-   console.log(randomSYear);
-   console.log(randomEYear);
    var selGenre=$("#movie-type-select").val(); // The value of the selected option
    selGenre= selGenre.split(',');
 
@@ -30,9 +28,7 @@ $( "#get-random-movie-btn" ).click(function() {
       success: function (response) {
          genreId=response.ITEMS[selGenre[0]][selGenre[1]];
          selGenre=genreId.join("%2C");
-         console.log(selGenre);
          urlXX='/api.cgi?q={query}-!'+randomSYear+','+randomEYear+'-!0,5-!0,10-!'+selGenre+'-!Movie-!Any-!Any-!gt100-!{downloadable}&t=ns&cl=all&st=adv&ob=Relevance&p=1&sa=and';
-         console.log(urlXX);
          randomMovie()
       }
    });
@@ -53,7 +49,6 @@ $( "#get-random-movie-btn" ).click(function() {
 
          // work with the response
          success: function (response) {
-            console.log(response); // server response
             count = response.COUNT; // Antal objekt i arrayen.
             if (count>100) {
                max=99;
@@ -68,17 +63,12 @@ $( "#get-random-movie-btn" ).click(function() {
             posterlink=response.ITEMS[random][2];
             length=response.ITEMS[random][8];
             plot=response.ITEMS[random][3];
-            console.log(title);
-            console.log(year);
-            console.log(posterlink);
-            console.log(length);
-            console.log(plot);
 
             $("#title").html(title);
             $("#year").html(year);
             $("#length").html(length);
             $("#plot").html(plot);
-
+            $movie.show();
             $("#posterbox").html("<img src="+posterlink+" alt=some_text class='img-responsive' id='poster'>");
          }
 
