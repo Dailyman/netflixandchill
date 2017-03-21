@@ -152,8 +152,8 @@ select {
     Egenskaper för desktop
     */
     figure {
-        margin-top: 50px;
-        width: 400px;
+        margin-top: 20px;
+        /*width: 400px;*/
         display: block;
         margin-left: auto;
         margin-right: auto;
