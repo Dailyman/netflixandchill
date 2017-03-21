@@ -99,6 +99,26 @@ ul > li {
     float: none;
 }
 
+#menu-icon {
+    /*background-color: rgba(200,200,200,0.4);*/
+    border-radius: 8px 8px 0 0;
+    text-align: center;
+    font-size: 40px;
+    padding: 0;
+}
+#menu-icon > i {
+    display: none;
+    width: 100%;
+    background-color: rgba(200,200,200,0.4);
+    padding: 13px 3px;
+    border-radius: 8px 8px 0 0;
+    cursor: pointer;
+}
+
+#menu-icon > i:hover {
+    background-color: rgba(200,200,200,0.8);
+}
+
 #navigation-icons {
     text-align: center;
     font-size: 30px;
@@ -117,6 +137,10 @@ ul > li {
 #navigation-icons > i:hover {
     background-color: #DC0405;
     box-shadow: none;
+}
+
+#navigation-icons > span {
+    vertical-align: text-bottom;
 }
 
 .active-page {
@@ -178,6 +202,24 @@ select {
     */
 }
 
+@media (max-width: 768px){
+
+    #menu-icon > i {
+        display: block;
+    }
+
+    #navigation-icons {
+        border-radius: 0 0 8px 8px;
+    }
+
+    #navigation-icons > i {
+        margin: 3px auto;
+        width: 95%;
+    }
+    #navigation-icons > span {
+        display: none;
+    }
+}
 
 @media screen and (min-width: 480px) and (max-width: 1024px){
     /*
@@ -185,6 +227,7 @@ select {
     */
 
 }
+
 
 @media screen and (min-width: 1025px){
 
