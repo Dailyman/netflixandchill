@@ -1,8 +1,8 @@
 $(document).on("ready", function(){
-    $("#food-container").hide();
+    $(".food-container").hide();
 
     $("#getRandomFoodBtn").on("click", function(){
-        $("#food-container").empty();
+        $(".food-container").empty();
 
         var type = $("#food-type-select").val();
         var pref = $("#preference-type-select").val();
@@ -20,20 +20,24 @@ $(document).on("ready", function(){
             var title = results.title;
             var image = results.image;
             var sourceUrl = results.sourceUrl;
-        //for (var i = 0; i < results.length; i++);
-        //    var stuff = results[i].;
-            image = '<img src="' + image + '" class="img-thumbnail">';
+
+            //$(".food-title").html(title);
+            //$('#movie-ajax-loader').hide();
+            //$movie.show();
+            $(".image-box").html("<img src="+ image +" alt=some_text class='img-responsive' id='poster'>");
+
+            /*image = '<img src="' + image + '" class="img-thumbnail">';*/
             title = '<p>Titel: <span class="title">' + "<br>" + title + '</span></p>';
             sourceUrl = '<a class="btn btn-primary btn-lg btn-block" target="_blank" href="' + sourceUrl + '" id="food-search-btn">Gå till recept</a>';
 
-            var addStuff = $('<div class="col-xs-12 col-md-6" centered>' + '<figure>' + image + '</figure>' + title + sourceUrl + '</div>');
+            var addStuff = $('<div>' + title + sourceUrl + '</div>');
 
             //$("#food-title").html(title);
             //$("#recipe-image").html('<img src="' + image + '" alt=some_text class="img-responsive" id="poster">');
-            $("#food-container").append(addStuff);
+            $(".food-container").append(addStuff);
             //$("#food-container").html("<p>Title: " + title + "</p>");
-            //$("a#food-search-btn").attr("href", "sourceUrl");
+            //$("a#food-search-btn").attr("href", "sourceUrl");*/
         });
-        $("#food-container").slideDown();
+        $(".food-container").show();
     });
 });
