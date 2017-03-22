@@ -28,8 +28,8 @@ $(document).on("ready", function(){
 
             var addStuff = $('<div class="col-xs-12 col-md-6" centered>' + '<figure>' + image + '</figure>' + title + sourceUrl + '</div>');
 
-            /*$("#food-title").html(title);
-            $("#recipe-image").html('<img src="' + image + '" alt=some_text class="img-responsive" id="poster">');*/
+            //$("#food-title").html(title);
+            //$("#recipe-image").html('<img src="' + image + '" alt=some_text class="img-responsive" id="poster">');
             $("#food-container").append(addStuff);
             //$("#food-container").html("<p>Title: " + title + "</p>");
             //$("a#food-search-btn").attr("href", "sourceUrl");
