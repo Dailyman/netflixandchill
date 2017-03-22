@@ -16,6 +16,7 @@ $(document).on("ready", function(){
         $('#food-ajax-loader').show();
         $poster.hide();
         $food.hide();
+        $extraFoodBtn.hide();
 
         var type = $("#food-type-select").val();
         var pref = $("#preference-type-select").val();

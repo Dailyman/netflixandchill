@@ -21,6 +21,9 @@ $( "#get-random-movie-btn" ).click(function() {
    $('#movie-ajax-loader').show();
    $movie.hide();
    $poster.hide();
+
+   $extraMovBtn.hide();
+
    var $filmInfo= $('#filmInfo'); //Hämtar elementet.
    $filmInfo.hide(); //Döljer element.
    var max=2017;
