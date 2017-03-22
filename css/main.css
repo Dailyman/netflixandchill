@@ -167,6 +167,9 @@ ul > li {
 }
 
 
+#drink-box .drink-container {
+    margin-bottom: 40px;
+}
 
 
 .drink-icon-container {
@@ -196,6 +199,7 @@ ul > li {
 
 select {
     font-weight: bold;
+    font-size: 25px;
 }
 
 
