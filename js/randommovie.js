@@ -74,11 +74,13 @@ $( "#get-random-movie-btn" ).click(function() {
             posterlink=response.ITEMS[random][2];
             length=response.ITEMS[random][8];
             plot=response.ITEMS[random][3];
+            imdb=response.ITEMS[random][11];
 
             $(".title").html(title);
             $(".year").html(year);
             $(".length").html(length);
             $(".plot").html(plot);
+            $('a.movie-search-btn').attr("href", "http://www.imdb.com/title/"+imdb);
             $('#movie-ajax-loader').hide();
             $movie.show();
             $(".posterbox").html("<img src="+posterlink+" alt=some_text class='img-responsive' id='poster'>");
