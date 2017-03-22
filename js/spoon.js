@@ -27,13 +27,15 @@ $(document).on("ready", function(){
             var title = results.title;
             var image = results.image;
             var sourceUrl = results.sourceUrl;
+            var time = results.readyInMinutes;
 
             $(".image-box").html("<img src="+ image +" alt=some_text class='img-responsive' id='poster'>");
 
-            ftitle = '<p>Titel: <span class="ftitle">' + "<br>" + title + '</span></p>';
-            sourceUrl = '<a class="btn btn-primary btn-lg btn-block" target="_blank" href="' + sourceUrl + '" id="food-search-btn">Gå till recept</a>';
+            ftitle = '<p>Title: <span class="ftitle">' + title + '</span></p>';
+            time = '<p>Ready in: ' + time + ' minutes</p>';
+            sourceUrl = '<a class="btn btn-primary btn-lg btn-block" target="_blank" href="' + sourceUrl + '" id="food-search-btn">Go to recipe</a>';
 
-            var addStuff = $('<div>' + ftitle + sourceUrl + '</div>');
+            var addStuff = $('<div>' + ftitle + time + sourceUrl + '</div>');
 
             $(".food-container").append(addStuff);
 
