@@ -1,12 +1,33 @@
 $(function() {
 
+    function hideMenu(type, time) {
+        if ($(window).width() <= 768) {
+            $('#menu-icon, #menu-icon > i').css('border-radius', '8px');
+            if (type === "slideUp") {
+                $('#navigation-icons').slideUp(time);
+            }
+            else if (type === "none"){
+                $('#navigation-icons').hide(time);
+            }
+        }
+    }
+
+    function showMenu() {
+
+    }
+
+    // Hide menu on load of page on mobile/tablet
+    if ($(window).width() <= 768) {
+        hideMenu("none",0);
+    }
+
+    // Hide menu on resize of page to width of mobile/tablet
     $(window).resize(function() {
         if ($(window).width() > 768) {
             $('#navigation-icons').show();
         }
         else {
-            $('#navigation-icons').hide();
-            $('#menu-icon, #menu-icon > i').css('border-radius', '8px');
+            hideMenu("none", 0);
         }
     });
 
@@ -47,6 +68,7 @@ $(function() {
 
     function showPage(pageId, linkId) {
         hidePages(pageId);
+        hideMenu('slideUp', 200);
         window.setTimeout(function() {
             setActiveLink(linkId);
             $('#'+pageId).fadeIn(200,function() {
@@ -206,16 +228,17 @@ $(function() {
 
     // START <- SUMMARY
     $('#restart-button').on('click', function(event) {
-        event.preventDefault();
-        $('#page5').removeClass('active-page');
-        $('#summary-box').hide('slide',{direction:'right'},200);
-        $('html, body').css('overflowX', 'hidden');
-        window.setTimeout(function() {
-            $('#page1').addClass('active-page');
-            $('#start-box').show('slide',{direction:'left'},200,function() {
-                $('html, body').css('overflowX', 'auto');
-            });
-        }, 250);
+        // event.preventDefault();
+        // $('#page5').removeClass('active-page');
+        // $('#summary-box').hide('slide',{direction:'right'},200);
+        // $('html, body').css('overflowX', 'hidden');
+        // window.setTimeout(function() {
+        //     $('#page1').addClass('active-page');
+        //     $('#start-box').show('slide',{direction:'left'},200,function() {
+        //         $('html, body').css('overflowX', 'auto');
+        //     });
+        // }, 250);
+        window.location.href = "index.html";
     });
 
 });
