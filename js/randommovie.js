@@ -5,6 +5,7 @@
 
 var $movie= $('.movieInfo'); //Hämtar elementet.
 $movie.hide(); //Döljer element.
+var $poster=$('.posterbox');
 
 
 $( "#get-random-movie-btn" ).click(function() {
@@ -13,6 +14,8 @@ $( "#get-random-movie-btn" ).click(function() {
    Sorterar sedan ut id för den genre som användaren valt.
    */
    $('#movie-ajax-loader').show();
+   $movie.hide();
+   $poster.hide();
    var $filmInfo= $('#filmInfo'); //Hämtar elementet.
    $filmInfo.hide(); //Döljer element.
    var max=2017;
@@ -79,6 +82,7 @@ $( "#get-random-movie-btn" ).click(function() {
             $('#movie-ajax-loader').hide();
             $movie.show();
             $(".posterbox").html("<img src="+posterlink+" alt=some_text class='img-responsive' id='poster'>");
+            $poster.show();
          }
 
       });
