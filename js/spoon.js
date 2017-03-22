@@ -55,6 +55,9 @@ $(document).on("ready", function(){
 
             var $sumFood = $("#foodIcon");
             $sumFood.hide();
+
+            document.body.scrollTop = document.body.scrollHeight;
+
         });
     });
 });
