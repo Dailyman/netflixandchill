@@ -6,9 +6,6 @@ html {
     line-height: 1.4;
 }
 
-body {
-    min-width: 250px;
-}
 
 ::-moz-selection {
     background: #b3d4fc;
@@ -65,6 +62,9 @@ body {
     font-family: 'Josefin Sans', sans-serif;
     font-size:20px;
     text-shadow: 0.5px 0.5px 0.7px #DC0405;
+    min-width: 250px;
+    margin-bottom: 50px;
+
 }
 
 #header {
@@ -157,19 +157,17 @@ ul > li {
 
 .nav-icon {
     border-radius: 8px;
-    background-color: #DC0405;
+    background-color: #D9534F;
     padding: 2%;
     cursor: pointer;
     box-shadow: 2px 2px 1px rgba(0,0,0,0.5);
 }
+
 .nav-icon:hover {
     box-shadow: none;
+    background-color: #DC0405;
 }
 
-
-#drink-box .drink-container {
-    margin-bottom: 40px;
-}
 
 
 .drink-icon-container {
