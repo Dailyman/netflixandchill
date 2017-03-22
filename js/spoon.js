@@ -7,7 +7,7 @@ $(document).on("ready", function(){
         $(".food-container").empty();
         $(".image-box").empty();
 
-        $('#movie-ajax-loader').show();
+        $('#food-ajax-loader').show();
         $poster.hide();
         $food.hide();
 
@@ -30,14 +30,14 @@ $(document).on("ready", function(){
             
             $(".image-box").html("<img src="+ image +" alt=some_text class='img-responsive' id='poster'>");
 
-            title = '<p>Titel: <span class="title">' + "<br>" + title + '</span></p>';
+            titleX = '<p>Titel: <span class="titleX">' + "<br>" + title + '</span></p>';
             sourceUrl = '<a class="btn btn-primary btn-lg btn-block" target="_blank" href="' + sourceUrl + '" id="food-search-btn">Gå till recept</a>';
 
-            var addStuff = $('<div>' + title + sourceUrl + '</div>');
+            var addStuff = $('<div>' + titleX + sourceUrl + '</div>');
 
             $(".food-container").append(addStuff);
 
-            $('#movie-ajax-loader').hide();
+            $('#food-ajax-loader').hide();
             $food.show();
             $poster.show();
         });
