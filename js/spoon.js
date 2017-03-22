@@ -1,8 +1,15 @@
 $(document).on("ready", function(){
     $(".food-container").hide();
+    var $poster = $(".image-box");
+    var $food = $(".food-container");
 
     $("#getRandomFoodBtn").on("click", function(){
         $(".food-container").empty();
+        $(".image-box").empty();
+
+        $('#movie-ajax-loader').show();
+        $poster.hide();
+        $food.hide();
 
         var type = $("#food-type-select").val();
         var pref = $("#preference-type-select").val();
@@ -20,24 +27,21 @@ $(document).on("ready", function(){
             var title = results.title;
             var image = results.image;
             var sourceUrl = results.sourceUrl;
-
-            //$(".food-title").html(title);
-            //$('#movie-ajax-loader').hide();
-            //$movie.show();
+            
             $(".image-box").html("<img src="+ image +" alt=some_text class='img-responsive' id='poster'>");
 
-            /*image = '<img src="' + image + '" class="img-thumbnail">';*/
             title = '<p>Titel: <span class="title">' + "<br>" + title + '</span></p>';
             sourceUrl = '<a class="btn btn-primary btn-lg btn-block" target="_blank" href="' + sourceUrl + '" id="food-search-btn">Gå till recept</a>';
 
             var addStuff = $('<div>' + title + sourceUrl + '</div>');
 
-            //$("#food-title").html(title);
-            //$("#recipe-image").html('<img src="' + image + '" alt=some_text class="img-responsive" id="poster">');
             $(".food-container").append(addStuff);
-            //$("#food-container").html("<p>Title: " + title + "</p>");
-            //$("a#food-search-btn").attr("href", "sourceUrl");*/
+
+            $('#movie-ajax-loader').hide();
+            $food.show();
+            $poster.show();
         });
-        $(".food-container").show();
+
+
     });
 });
