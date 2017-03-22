@@ -45,7 +45,5 @@ $(document).on("ready", function(){
             var $sumFood = $("#foodIcon");
             $sumFood.hide();
         });
-
-
     });
 });
