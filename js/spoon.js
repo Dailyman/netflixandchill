@@ -42,6 +42,8 @@ $(document).on("ready", function(){
             $('#food-ajax-loader').hide();
             $food.show();
             $poster.show();
+            var $sumFood = $("#foodIcon");
+            $sumFood.hide();
         });
 
 
