@@ -182,7 +182,7 @@ ul > li {
     margin-bottom: 20px;
 }
 
-#drink-ajax-loader {
+#drink-ajax-loader, #food-ajax-loader, #movie-ajax-loader{
     margin: 0 auto;
 }
 
