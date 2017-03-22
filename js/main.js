@@ -119,7 +119,7 @@ $(function() {
     });
 
     // DRINK -> FOOD
-    $('#drink-button').on('click', function(event) {
+    $('#drink-button, #extra-drink-button').on('click', function(event) {
         event.preventDefault();
 
         $('#page2').removeClass('active-page');
@@ -135,7 +135,7 @@ $(function() {
     });
 
     // FOOD -> MOVIE
-    $('#food-button').on('click', function(event) {
+    $('#food-button, #extra-food-button').on('click', function(event) {
         event.preventDefault();
 
         $('#page3').removeClass('active-page');
@@ -151,7 +151,7 @@ $(function() {
     });
 
     // MOVIE -> SUMMARY
-    $('#movie-button').on('click', function(event) {
+    $('#movie-button, #extra-movie-button').on('click', function(event) {
         event.preventDefault();
 
         $('#page4').removeClass('active-page');

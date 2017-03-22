@@ -7,6 +7,11 @@ var $movie= $('.movieInfo'); //Hämtar elementet.
 $movie.hide(); //Döljer element.
 var $poster=$('.posterbox');
 
+// HIDE EXTRA NEXT PAGE BTN
+var $extraMovBtn = $('#movie-bottom-btn');
+$extraMovBtn.hide();
+
+
 
 $( "#get-random-movie-btn" ).click(function() {
    /*
@@ -27,7 +32,7 @@ $( "#get-random-movie-btn" ).click(function() {
    selGenre= selGenre.split(',');
    //Ajax-anrop
    $.ajax({
-      url: 'https://unogs-unogs-v1.p.mashape.com/api.cgi?t=genres', 
+      url: 'https://unogs-unogs-v1.p.mashape.com/api.cgi?t=genres',
       type: 'GET',
       data: {},
       dataType: 'json',
@@ -50,7 +55,7 @@ $( "#get-random-movie-btn" ).click(function() {
    Film väljs sedan ut med hjälp av random
    */
       $.ajax({
-         url: 'https://unogs-unogs-v1.p.mashape.com'+urlXX, 
+         url: 'https://unogs-unogs-v1.p.mashape.com'+urlXX,
          type: 'GET',
          data: {},
          dataType: 'json',
@@ -85,19 +90,13 @@ $( "#get-random-movie-btn" ).click(function() {
             $movie.show();
             $(".posterbox").html("<img src="+posterlink+" alt=some_text class='img-responsive' id='poster'>");
             $poster.show();
+
+            // SHOW EXTRA NEXT PAGE BTN
+            $extraMovBtn.show();
+
             document.body.scrollTop = document.body.scrollHeight;
          }
 
       });
    }
 });
-
-
-
-
-
-
-
-
-
-

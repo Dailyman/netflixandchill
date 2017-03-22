@@ -69,7 +69,7 @@ body {
     font-size:20px;
     text-shadow: 0.5px 0.5px 0.7px #DC0405;
     min-width: 250px;
-    margin-bottom: 50px;
+    margin-bottom: 5px;
 
 }
 
@@ -200,8 +200,8 @@ ul > li {
     margin-right:auto;
 }
 
-#drink-button, #food-button, #movie-button, #restart-button {
-
+#extra-drink-button, #extra-food-button, #extra-movie-button {
+    margin: 10px 0;
 }
 
 select {

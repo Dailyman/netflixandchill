@@ -1,4 +1,10 @@
 $(document).on("ready", function(){
+
+    // HIDE EXTRA NEXT PAGE BTN
+    var $extraFoodBtn = $('#food-bottom-btn');
+    $extraFoodBtn.hide();
+
+
     $(".food-container").hide();
     var $poster = $(".image-box");
     var $food = $(".food-container");
@@ -42,6 +48,10 @@ $(document).on("ready", function(){
             $('#food-ajax-loader').hide();
             $food.show();
             $poster.show();
+
+            // SHOW EXTRA NEXT PAGE BTN
+            $extraFoodBtn.show();
+
             var $sumFood = $("#foodIcon");
             $sumFood.hide();
         });
