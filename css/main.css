@@ -200,6 +200,10 @@ select {
     font-size: 25px;
 }
 
+.space-left {
+    margin-left: 20px;
+}
+
 
 
 @media screen and (min-width: 479px){

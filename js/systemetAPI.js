@@ -1,6 +1,7 @@
 var $drink_container = $('.drink-container');
 $drink_container.hide();
 
+
 $('#randomDrink').on('click', function() {
 
     $drink_container.hide();
@@ -68,6 +69,9 @@ function DisplayProducts(data) {
     $('.drink-alcohol').html(alc+ " %");
 
     $('a.drink-search-btn').attr("href", "https://www.systembolaget.se/sok-dryck/?searchquery="+rnd_drink.product_number+"&fullassortment=1");
+
+    // Hide "no drink" icon/text on summary page
+    $('#drinkIcon').hide();
 
     $drink_container.show();
 
