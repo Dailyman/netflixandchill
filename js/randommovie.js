@@ -83,6 +83,7 @@ $( "#get-random-movie-btn" ).click(function() {
             $movie.show();
             $(".posterbox").html("<img src="+posterlink+" alt=some_text class='img-responsive' id='poster'>");
             $poster.show();
+            document.body.scrollTop = document.body.scrollHeight;
          }
 
       });
