@@ -12,6 +12,7 @@ $( "#get-random-movie-btn" ).click(function() {
    Hämtar alla genre id från APIet.
    Sorterar sedan ut id för den genre som användaren valt.
    */
+   $('#movie-ajax-loader').show();
    var $filmInfo= $('#filmInfo'); //Hämtar elementet.
    $filmInfo.hide(); //Döljer element.
    var max=2017;
@@ -21,7 +22,6 @@ $( "#get-random-movie-btn" ).click(function() {
    randomEYear=randomSYear+2;
    var selGenre=$("#movie-type-select").val();
    selGenre= selGenre.split(',');
-
    //Ajax-anrop
    $.ajax({
       url: 'https://unogs-unogs-v1.p.mashape.com/api.cgi?t=genres', 
@@ -76,6 +76,7 @@ $( "#get-random-movie-btn" ).click(function() {
             $(".year").html(year);
             $(".length").html(length);
             $(".plot").html(plot);
+            $('#movie-ajax-loader').hide();
             $movie.show();
             $(".posterbox").html("<img src="+posterlink+" alt=some_text class='img-responsive' id='poster'>");
          }
