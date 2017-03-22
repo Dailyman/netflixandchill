@@ -27,13 +27,13 @@ $(document).on("ready", function(){
             var title = results.title;
             var image = results.image;
             var sourceUrl = results.sourceUrl;
-            
+
             $(".image-box").html("<img src="+ image +" alt=some_text class='img-responsive' id='poster'>");
 
-            titleX = '<p>Titel: <span class="titleX">' + "<br>" + title + '</span></p>';
+            ftitle = '<p>Titel: <span class="ftitle">' + "<br>" + title + '</span></p>';
             sourceUrl = '<a class="btn btn-primary btn-lg btn-block" target="_blank" href="' + sourceUrl + '" id="food-search-btn">Gå till recept</a>';
 
-            var addStuff = $('<div>' + titleX + sourceUrl + '</div>');
+            var addStuff = $('<div>' + ftitle + sourceUrl + '</div>');
 
             $(".food-container").append(addStuff);
 
